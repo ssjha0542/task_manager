@@ -3,6 +3,8 @@
 }
 body{
     margin: 0px;
+    font-family: "Raleway",sans-serif;
+    background-color: #ecf0f1;
 }
 .toolbar{
     height: 12vh;
@@ -57,9 +59,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.main_container{
-    height:85vh;
-}
+
 .modal_container{
     position:absolute;
     height:18rem;
@@ -100,4 +100,31 @@ body{
 }
 .border{
     border:0.2rem solid white ;
+}
+.main_container{
+    height:88vh;
+    
+    padding-top: 2rem;
+    padding-left: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.task_filter{
+    height: 7%;
+}
+.task_container{
+    height: 10rem;
+    width:16rem;
+    background-color: #fff;
+    
+}
+.task_desc_container{
+    padding-left: 0.5rem;
+}
+.task_desc{
+    text-align: center ;
+}
+.uid{
+    color:#444;
 }
