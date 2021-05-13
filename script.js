@@ -2,6 +2,7 @@ let colorBtn=document.querySelectorAll(".filter_color");
 let mainContainer=document.querySelector(".main_container");
 let body=document.body;
 let plusBtn=document.querySelector(".fa-plus");
+let colors=["pink", "blue" , "green" , "black"];
 for(let i=0;i<colorBtn.length;i++){
     colorBtn[i].addEventListener("click",function(e){
     let color=colorBtn[i].classList[1];
@@ -62,4 +63,13 @@ function createTask(color,task){
     
 </div>`
 mainContainer.appendChild(taskContainer);
+let taskFilter=taskContainer.querySelector(".task_filter");
+taskFilter.addEventListener("click",function changeColor() {
+    let cColor=taskFilter.classList[1];
+    let indx=colors.indexOf(cColor);
+    let newColor=(indx + 1) % 4;
+    taskFilter.classList.remove(cColor);
+    taskFilter.classList.add(colors[newColor]);
+})
+
 }

@@ -66,7 +66,7 @@ body{
     width:36rem;
     
     background-color: brown;
-    left: 3vw;
+    left: calc((100vw - 36rem)/2);
     top:30vh;
     display: flex;
 }
