@@ -59,6 +59,12 @@ body{
     justify-content: center;
     align-items: center;
 }
+.fas{
+    font-size: 1.5rem;
+}
+.active{
+    background-color: #525555;
+}
 
 .modal_container{
     position:absolute;
@@ -103,7 +109,7 @@ body{
 }
 .main_container{
     height:88vh;
-    
+    overflow: auto;
     padding-top: 2rem;
     padding-left: 3rem;
     display: flex;
@@ -121,10 +127,14 @@ body{
 }
 .task_desc_container{
     padding-left: 0.5rem;
+    height: 80%;
+    overflow-y: auto;
+    text-align: center;
 }
 .task_desc{
     text-align: center ;
 }
 .uid{
     color:#444;
+    margin-bottom: 0.5rem;
 }
