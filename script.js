@@ -68,7 +68,10 @@ function handleModal(modal_container){
             //remove modal_container
             modal_container.remove();
             //create task dynamic
+            let allowed=/[0-9a-zA-Z]+$/;
+            if(textArea.value.match(allowed)){
             createTask(cColor,textArea.value,true)
+            }
         }
     })
 }
@@ -143,7 +146,7 @@ function editTask(e) {
     for (let i = 0; i < taskArr.length; i++) {
          let { id } = taskArr[i];
         console.log(id, uid);
-        if (id == uid) {
+        if (id == uid ) {
             taskArr[i].task = taskDesc.innerText;
             let finalTaskArr = JSON.stringify(taskArr);
             localStorage.setItem("allTask", finalTaskArr);
